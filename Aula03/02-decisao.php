@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    
+   
     <!-- Título da página -->
     <div class="container-fluid alert alert-primary" role="alert">
         <h1 id="topo">Estruturas de Decisão (Controle Condicional)</h1>
@@ -45,17 +45,17 @@
             <a href="#encadeada">
                 <button class="btn btn-outline-success me-2" type="button">Encadeada</button></a>
             <a href="#opção">
-                <button class="btn btn-outline-success me-2" type="button">Switch/Case</button></a> 
+                <button class="btn btn-outline-success me-2" type="button">Switch/Case</button></a>
         </form>
     </nav>
     <hr>
-        
+       
     <!-- ___________________________________________________________________ -->
     <div class="alert alert-light" role="alert" >
         <h2><a href="">Simples</a></h2>
     </div>
-    
-    <h4>&ensp;Modo 1 - Com chaves</h4> 
+   
+    <h4>&ensp;Modo 1 - Com chaves</h4>
     <p>&emsp;if ( comparação condicional ) { comando caso a comparação seja verdadeira };</p>
 
     <h4>&ensp;Modo 2 - Sem chaves</h4>
@@ -71,22 +71,39 @@
     </ul>
 
     <!-- Criar aqui seu programa PHP -->
-    
-    
+
+    <?php
+
+    $minhavariavel = 5;
+
+    if ($minhavariavel > 1) {
+        echo " o valor da minha variável é maior que 1.";
+    }
+
+    ?>
+
+    <br>
+
+    <?php
+
+    if($minhavariavel>1) echo "a variável tem o valor maior que 1";
+
+    ?>
+   
     <hr>
-    
+   
     <!-- ___________________________________________________________________ -->
-    
+   
     <div class="alert alert-light" role="alert" id="composta">
         <h2><a href="#topo">Composta</a></h2>
     </div>
-    
+   
     <p>&nbsp;Também chamada de <strong>aninhada</strong>, ao usar if: </p>
     <ul>
         <li>Condição verdadeira, usar outro if</li>
         <li>Condição falsa, usar else</li>
     </ul>
-    
+   
     <br>
     <h4>&nbsp;if ( comparação ) {</h4>
     <h4>&emsp;comando para comparação verdadeira</h4>
@@ -121,8 +138,18 @@
     <hr>
 
     <!-- Criar aqui seu programa PHP -->
+    <h3>Ultrabook ASUS</h3>
+        <?php
 
-    
+        $a = 0;
+
+        if ($a < 14 ) {
+            echo '<mark>Urgente</mark>';
+            echo  '<p class="repor"> Necessário comprar </p>';
+        } else {
+            echo '<p class="ok"> Fica tranquilo, estoque OK!</p>';
+        }
+        ?>
     <hr>
 
     <!-- ___________________________________________________________________ -->
@@ -137,7 +164,7 @@
         <li>Terceira condição vendadeira, programar outro comando</li>
         <li>Condição falsa, Avisar usuário.</li>
     </ul>
-    
+   
     <br>
     <h4>&nbsp;if ( comparação ) {</h4>
     <h4>&emsp;comando para 1ª comparação verdadeira;</h4>
@@ -166,9 +193,30 @@
         <li>Exibir o nome do produto pedido conforme a opção escolhida na variável.</li>
     </ul>
     <hr>
-    
+   
     <!-- Criar aqui seu programa PHP -->
-    
+
+    <h3>Lista de opções</h1>
+        <h5>1 - Pastel</h5>
+        <h5>2 - Pizza</h5>
+        <h5>3 - Esfiha</h5>
+       
+        <?php
+        $opção = 1;
+            if($opção == 1) {
+                $opçaoEscolhida = "Pastel";
+            } elseif ($opção == 2) {
+                $opçaoEscolhida = "Pizza";
+            } elseif ($opção == 3) {
+                $opçaoEscolhida = "Esfiha";
+            } else {
+                $opçaoEscolhida = "Opção inválida";
+            }
+
+            echo "<p>$opçaoEscolhida</p>";
+
+        ?>
+   
     <hr>
 
     <!-- ___________________________________________________________________ -->
@@ -186,7 +234,7 @@
         </ol>
         <li class="sem_marcador">&emsp;Nenhuma das opções: Avisar usuário</li>
     </ul>
-    
+   
     <br>
     <h4>&nbsp;switch ( escolha dentro da variável ) {</h4>
     <h4>&emsp;case 1: comando para 1ª escolha; break;</h4>
@@ -202,8 +250,18 @@
     <hr>
 
     <!-- Criar aqui seu programa PHP -->
-    
-    
+   
+    <?php
+
+        switch($opção) {
+            case 1: $pedido = "Pastel"; break;
+            case 2: $pedido = "Pizza"; break;
+            case 3: $pedido = "Esfirra"; break;
+            default: $pedido = "Opção Inválida"; break;
+        }
+
+        echo "<p>$pedido</p>";
+    ?>
     <!-- Rodapé -->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
