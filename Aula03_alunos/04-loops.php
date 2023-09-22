@@ -14,7 +14,15 @@
     <h2 class="destaque">While (enquanto)</h2>
 
 
-    <!-- 1ª Digitação (Aqui) -->
+<?php
+    $i = 1;
+    while ($i <=5) {
+?>
+    <p><?=$i?></p>
+<?php
+        $i ++; 
+    }
+?>
 
 
 <hr>
@@ -23,7 +31,17 @@
     <h2 class="destaque">do/while (repita)</h2>
 
 
-<!-- 2ª Digitação (Aqui) -->
+<?php
+    $j = 1;
+        do {
+?>
+
+<div><h3>Olá!</h3></div>
+
+<?php
+    $j++;
+} while ($j <=3);
+?>
 
 
 <hr>
@@ -36,7 +54,9 @@
 
     //Controle; Condição; Atualização
 
-    //  3ª Digitação (Aqui)
+for($i = 1; $i <=10; $i++) {
+    echo $i. "";
+}
 
  ?>
  <!-- _______________________________________________________________________________ -->
@@ -55,7 +75,22 @@
     <ol>
 
 
-        <!-- 4ª Digitação (Aqui) -->
+        <?php
+            // $l = ($meses);
+
+            // print_r($l);
+            // echo "<br>";
+
+            $quantidade = count($meses);
+
+            for($k = 0; $k <$quantidade; $k++) {
+
+        ?>
+                <li><?=$meses[$k]?></li>
+
+        <?php
+            }
+        ?>
 
 
     </ol>
@@ -67,7 +102,14 @@
 <ol>
 
 
-    <!-- 5ª Digitação (Aqui) -->
+<?php
+    foreach($meses as $mes) {
+
+    ?>
+        <li><?=$mes?></li>
+    <?php
+    }
+    ?>
     
 
 </ol>
@@ -83,7 +125,14 @@
 
     ];
 
-    //  6ª Digitação (Aqui) 
+foreach($clubes as $clube => $apelido) {
+    ?>
+    <p>
+        o <?=$clube?> é conhecido como: <?=$apelido?>
+    </p>
+<?php
+}
+
 
 ?>
 <!-- _______________________________________________________________________________ -->
@@ -113,7 +162,9 @@ $alunos = [
     foreach($alunos as $aluno){
 ?>
 
-  <!-- 7ª Digitação (Aqui) -->
+  <p>Nome: <?=$aluno['nome']?></p>
+  <p>Idade: <?=$aluno['idade']?></p>
+  <hr>
 
 <?php
     }
