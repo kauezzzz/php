@@ -1,0 +1,21 @@
+.ok {
+    color:green;
+    font-weight: bold;
+    font-size: 18px;
+}
+.destaqueP {
+    color:red;
+    font-weight: bold;
+    font-size: 28px;
+}
+.destaque {
+    color:blue;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 26px;
+}
+.repor {
+    color:red;
+    font-weight: bold;
+    font-size: 18px;
+}
